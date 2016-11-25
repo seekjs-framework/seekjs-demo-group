@@ -4,7 +4,7 @@
 
 seekjs.config({
     ns:{
-        "js.": "/js/",
+        "util.": "/utils/",
         "css.": {
             path: "/css/",
             type: ".css"
@@ -17,11 +17,13 @@ require("css.class");
 
 var app = require("sys.app");
 
-app.viewEx = require("js.view");
-app.pipeEx = require("js.pipe");
+app.viewEx = require("util.view");
+app.pipeEx = require("util.pipe");
 
 app.config({
-    page: `/pages/`
+    js: `/js/`,
+    css: `/css/`,
+    templates: `/templates/`
 });
 
 app.init("home");
